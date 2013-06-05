@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="ie lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="ie lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="ie lt-ie9"> <![endif]-->
+<!--[if gt IE 8]> <html class="ie gt-ie8"> <![endif]-->
+<!--[if !IE]><!--><html><!-- <![endif]-->
+    <head>
+        <title>GInIEm - <?php echo $this->translate('Members Area') ?></title>
+
+        <!-- Meta -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+        <!-- Bootstrap -->
+        <link href="/vendor/bootstrap-2.3.2/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="/vendor/bootstrap-2.3.2/css/bootstrap-responsive.min.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="login">
+            <div class="container">
+                <p class="pager">
+                    <img src="/images/logo.png" style="width: 200px; margin-bottom: 20px" />
+                </p>
+                <!-- Box -->
+                <div>
+                    <h3 class="heading"><?php echo $this->translate("Sign In"); ?></h3>
+
+                    <!-- Form -->
+                    <form method="post" action="/auth/authenticate" id="auth-form">
+
+                        <label><?php echo $this->translate('Username'); ?></label>
+                        <input id="username" name="username" type="text"
+                               class="input-block-level" 
+                               placeholder="<?php echo $this->translate("Write your username here"); ?>" required/>
+
+                        <label><?php echo $this->translate('Password') ?></label>
+                        <input id="password" name="password" type="password"
+                               class="input-block-level margin-none"
+                               placeholder="<?php echo $this->translate("Write your password here"); ?>" required/>
+
+                        <div class="row-fluid">
+                            <button class="btn btn-block btn-primary" type="submit"><?php echo $this->translate('Login'); ?></button>
+                        </div>
+                    </form>
+                    <!-- // Form END -->
+
+                </div>
+                <!-- // Box END -->
+            </div>
+        </div>
+
+        <!-- JQuery -->
+        <script src="/vendor/jquery-2.0.2/jquery-2.0.2.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="/vendor/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+        <!-- Custom Code -->
+        <script src="/js/giniem/auth.index.js"></script>
+    </body>
+</html>
